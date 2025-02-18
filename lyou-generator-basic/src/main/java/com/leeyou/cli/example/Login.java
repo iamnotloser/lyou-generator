@@ -10,7 +10,7 @@ class Login implements Callable<Integer> {
     @CommandLine.Option(names = {"-u", "--user"}, description = "User name")
     String user;
 
-    @CommandLine.Option(names = {"-p", "--password"}, description = "Passphrase", interactive = true)
+    @CommandLine.Option(names = {"-p", "--password"}, arity="0..1",description = "Passphrase", interactive = true)
     String password;
 
     public Integer call() throws Exception {
